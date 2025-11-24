@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  temporal:
+    image: temporalio/auto-setup:1.22.0
+    container_name: temporal
+    ports:
+      - "7233:7233"  # Temporal gRPC
+      - "8233:8233"  # Temporal Web UI
+    environment:
+      - DB=sqlite
+      - DYNAMIC_CONFIG_FILE_PATH=config/dynamicconfig/development-sql.yaml
+    volumes:
+      - ./temporal-data:/etc/temporal/config/dynamicconfig

@@ -1,0 +1,30 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+pizza-demo
+worker/worker
+worker/pizza-order-dag-demo
+
+# Output
+*.out
+
+# Go workspace file
+go.work
+
+# Temporal data
+temporal-data/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
